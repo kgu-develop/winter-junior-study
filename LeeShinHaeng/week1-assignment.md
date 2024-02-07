@@ -26,3 +26,71 @@
 ### 참조
 - [https://velog.io/@yulhee741/Github-Issue-Templates으로-Issue-쉽고-체계적이게-작성해보기]
 ---
+
+## Git Branch 전략
+
+### 필요성
+- 작업 중인 파일을 다른 사람이 건드릴 위험 존재
+- 히스토리가 메인 브랜치에 뒤죽박죽 섞임
+- 병렬 개발에 어려움
+- 롤백하기 어려움
+- 메인 브랜치가 불완전한 상태로 존재
+### 종류
+- Git Flow
+    
+    : 5개 종류의 브랜치로 나눠 관리하는 전략
+
+    - 브랜치 종류 
+    
+    1. Main
+        
+        : 출시 가능한 프로덕션 코드를 모아둠 
+        
+    2. Develope
+        
+        : 다음 버전을 위한 신기능을 모아두고 출시할 때 Main에 Merge 
+        
+    3. Feature
+        
+        : 세부 기능을 개발하는 코드를 모아두고 각 기능 개발 완료 시 Develope에 Merge
+        
+        - 작명법: feature/기능
+    4. Release
+        
+        : 출시 하기 전 여러가지 테스트 및 수정을 위한 브랜치. 여기서 가다듬고 완성되면 Main에 Merge + Develope에도 Merge 해서 개발을 이어 갈수 있게 함
+        
+    5. Hotfix
+        
+        : Main에서 급하게 수정해야 할 버그 발생 시 Main에서 직접 따서 수정 후 Merge
+        
+    
+    ※ 웹앱에 적합하지 않을 수도 있음
+    
+    - 이유1. 일반적으로 롤백되지 않음
+    - 이유2. CI/CD되므로 여러 버전의 SW를 제공할 필요가 없음
+- Github Flow
+    
+    : Git Flow에 비해 단순한 구조로 Github환경에서 사용하기 적합 
+
+    - 브랜치 종류 
+    
+    1. Main
+        
+        : 언제 배포하든지 문제 없을 만큼 항상 Stable한 상태를 유지 
+        
+    2. Topic
+        
+        : 새로운 기능을 개발할 때 사용
+        
+        - Git Flow의 Feature, Hotfix를 통합한 것과 유사한 개념
+        - 기능이 완성되지 않더라도 꾸준히 Push하고 커뮤니케이션
+        - 완성되면 PR을 통해 Main에 Topic을 Merge
+- Trunk-based
+    
+    : Github Flow와 유사한 방식으로 Main외에 하나의 브랜치만 관리 -> 더 간단
+        
+### 참조
+- https://www.youtube.com/watch?v=EV3FZ3cWBp8
+- https://hudi.blog/git-branch-strategy/
+
+---
