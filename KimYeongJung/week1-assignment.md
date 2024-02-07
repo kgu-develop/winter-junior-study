@@ -3,8 +3,7 @@
 	- 버그 리포트 이슈 : 버그 종류 / 버그가 발생한 상황 / 예상 결과 / 참고 자료(선택)
 - PR Template : issue 템플릿처럼 여러 개를 설정 할 수 없음
 	- 이슈 생성 방법 : 연관된 이슈 / 작업 내용 / 스크린샷(선택) / 리뷰 요구사항(선택)
-
-
+---
 - git branch를 사용하는 이유 : 여러 개발자가 main branch에서만 작업한다면 누군가가 작업중인 파일을 건드릴 수 있기 때문이다.
 	- git branch 전략 중 하나 : 워크 플로우
 	- 워크 플로우(git flow) → 웹 어플리케이션에는 적합하지 않음
@@ -17,3 +16,10 @@
 	- github flow → 단일 릴리즈 버전 / 소규모 팀
     		- main branch : 항상 stable → 모든 commit은 빌드 가능
     		- topic branch : main 브랜치에서 생성 → feature 브랜치와 동일한 역할
+---
+- Naming Convention
+    - snake case : snacke_case → DB
+    - camel case : camelCase → java
+    - pascal case  : PascalCase → C++
+    - kebab case : kebab-case → url, html, css
+    - scream snake case : SCREAM_SNAKE_CASE → 상수 표현할 때
