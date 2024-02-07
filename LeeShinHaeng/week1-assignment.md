@@ -94,3 +94,38 @@
 - https://hudi.blog/git-branch-strategy/
 
 ---
+
+## Naming convention
+
+### 정의
+    
+: 식별자에 사용되는 문자열을 선택하기 위한 여러가지 규칙
+    
+### 목적
+- 가독성 향상
+- 더 나은 이해
+- 코드 작성시 일관성을 촉진
+### 종류
+- UpperCamelCase(PascalCase)
+    
+    : 첫 단어를 포함한 각 단어의 첫문자를 대문자로 표시
+    
+    - 주로 클래스명에 사용
+- lowerCamelCase
+    
+    : 첫 단어를 제외한 각 단어의 첫문자를 대문자로 표시
+    
+    - 주로 함수명, 변수명에 사용
+- snake_case
+    
+    : 각 단어 사이를 언더스코어 _ 로 구분
+    
+    - 파일명에 사용
+- kebab-case
+    
+    : 각 단어 사이를 하이픈 - 으로 구분 (꼬치모양처럼)
+    
+    - 일부 css나 html에서 사용
+### 참조
+- https://bmind305.tistory.com/45
+- [https://velog.io/@hahan/Naming-Convention이란-무엇일까]
