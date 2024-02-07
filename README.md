@@ -36,7 +36,7 @@
 |:---:|:---|
 |1주차| GitHub issue templates / Git Branch 전략 / Naming convention|
 |2주차| 프로젝트 적용 실습|
-|3주차| Markdown / Swagger|
+|3주차| Markdown / Swagger / GitHub Actions|
 |4주차| 프로젝트 적용 실습|
 
 </br></br>
@@ -65,6 +65,34 @@
 스터디 주제에 대한 자료 및 의견을 공유합니다.
 스터디 결과물을 Markdown 파일로 작성하여 해당 리포지토리에 업로드합니다.
 다른 참여자들의 작업물을 확인하고 피드백을 제공합니다.
+
+</br>
+
+과제물을 제출할 때는 main 브랜치가 아닌 `{이름}` 브랜치를 생성하여 제출합니다. 제출하는 파일은 루트에 `{이름}` 폴더를 생성한 후 그 아래에 `week{week}-assignment.md` 라는 형식을 지켜주세요.
+
+</br>
+
+스터디 Repository로 Push할 때는 `{해당 주차} 과제 제출`와 같은 커밋 형식을 지켜주세요. </br>
+최종 PR을 할 때는 `[{이름}] 스터디 수료`와 같은 PR 형식을 지켜주세요. 스터디 종료 전까지는 개인 브랜치에 과제물을 push하다가 스터디 종료시 main 브랜치로 PR할 예정입니다.
+
+</br>
+
+ex)
+```
+브랜치명: LeeSanghyun
+
+커밋: [이상현] 1주차 과제 제출
+
+최종 PR: [이상현] 스터디 수료
+
+디렉터리 구조:
+├── README.md
+├── assignment
+│   ├── ...
+├── LeeSanghyun
+│   ├── week1-assignment.md
+|   ├── ...
+```
 
 </br></br>
 
