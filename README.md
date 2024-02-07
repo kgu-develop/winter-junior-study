@@ -12,7 +12,7 @@
 * 개발 프로젝트를 성공적으로 이끌기 위한 기초 개념 습득
 * 실제 프로젝트에 적용 가능한 지식과 기술 향상
 * 팀원 간 협업과 의사소통 능력 향상
-</br></br>
+</br></br></br>
 
 ## 스터디 멤버
 |<a href="https://github.com/Nter-developer"><img width="100px" src="https://avatars.githubusercontent.com/u/59863112?v=4"/></a>|<a href="https://github.com/Kimhanyeol"><img width="100px" src="https://avatars.githubusercontent.com/u/63261054?v=4"/></a>|<a href="https://github.com/LeeShinHaeng"><img width="100px" src="https://avatars.githubusercontent.com/u/72925577?v=4"/></a>|<a href="https://github.com/zmzmdd"><img width="100px" src="https://avatars.githubusercontent.com/u/116993837?v=4"/></a>|
@@ -42,6 +42,7 @@
 </br></br>
 
 ## 디렉토리 구조
+제출하는 파일은 루트에 `{이름}` 폴더를 생성한 후 그 아래에 `week{week}-assignment.md` 라는 형식을 지켜주세요.
 ```
 ├── README.md
 ├── assignment
@@ -68,22 +69,35 @@
 
 </br>
 
-과제물을 제출할 때는 main 브랜치가 아닌 `{이름}` 브랜치를 생성하여 제출합니다. 제출하는 파일은 루트에 `{이름}` 폴더를 생성한 후 그 아래에 `week{week}-assignment.md` 라는 형식을 지켜주세요.
+## PR, commit 규칙
+
+과제물을 제출할 때는 main 브랜치가 아닌 [KGU Developer](https://github.com/kgu-develop/winter-junior-study)의 winter-junior-study repository에 `{이름}` 브랜치를 생성하여 제출합니다. 
 
 </br>
 
-스터디 Repository로 Push할 때는 `{해당 주차} 과제 제출`와 같은 커밋 형식을 지켜주세요. </br>
-최종 PR을 할 때는 `[{이름}] 스터디 수료`와 같은 PR 형식을 지켜주세요. 스터디 종료 전까지는 개인 브랜치에 과제물을 push하다가 스터디 종료시 main 브랜치로 PR할 예정입니다.
+주차별 과제를 진행할 때는 fork한 본인 repository의 `{이름}` 브랜치에서 `{주차}` 브랜치를 생성해서 진행해주세요. `주차` 브랜치에서 커밋 단위는 과제 1개로 해주세요.
+과제별 커밋 형식은 `과제: {과제} 제출`입니다. 
+
+</br>
+
+주차별 과제를 모두 완료하면 KGU Developer의 [winter-junior-study](https://github.com/kgu-develop/winter-junior-study) repository의 `{이름}` 브랜치로 PR합니다. 이때 PR 형식은 `[{해당 주차}] 과제 완료`입니다. 
+PR 후에 fork한 repository를 Synk fork해주는 걸 잊지 마세요.
+최종 PR을 할 때는 `[{이름}] 스터디 수료`와 같은 PR 형식을 지켜주세요. 최종 스터디 종료 전까지는 개인 브랜치에서 과제를 진행하다가 스터디 종료시 main 브랜치로 PR할 예정입니다 :)
 
 </br>
 
 ex)
 ```
 브랜치명: LeeSanghyun
+브랜치명: 1주차
 
-커밋: [이상현] 1주차 과제 제출
+과제별 커밋: 과제: Git Branch 전략 제출
+과제별 커밋: 과제: Naming convention 제출
+과제별 커밋: 과제: GitHub issue templates 제출
 
-최종 PR: [이상현] 스터디 수료
+PR to {이름} 브랜치: [1주차] 과제 완료
+
+PR to {main} 브랜치: [이상현] 스터디 수료
 
 디렉터리 구조:
 ├── README.md
