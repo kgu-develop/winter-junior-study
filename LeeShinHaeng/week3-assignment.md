@@ -235,3 +235,35 @@ https://yozm.wishket.com/magazine/detail/2195/
 https://www.youtube.com/watch?v=Q27PGBYmHNA&list=WL&index=8
 
 ---
+
+## UI Resource
+
+### 정의
+
+- 프로젝트에서 사용할 수 있는 자원
+
+### 사용법
+
+1. 저장
+    - res 폴더에 저장
+2. 호출
+    - @리소스종류/리소스명
+
+### 리소스 종류
+
+1. drawable
+    - 이미지 리소스 파일
+    - 예시: .jpg, .png, .xml
+2. layout
+    - 화면을 구성하는 .xml
+3. mipmap
+    - 앱 아이콘
+4. values
+    - 다양한 값들
+    - 예시: colors, string, themes
+
+### 참조
+
+https://apro-developer.tistory.com/37
+
+---
