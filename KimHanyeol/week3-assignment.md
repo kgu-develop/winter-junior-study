@@ -41,11 +41,32 @@ HTML과 리치 텍스트(RTF) 등 서식 문서로 쉽게 변환되기 때문에
 |왼쪽정렬|오른쪽정렬|가운데정렬|
 |왼쪽정렬&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;오른쪽정렬|&nbsp;&nbsp;&nbsp;가운데정렬&nbsp;&nbsp;&nbsp;|
 
+</br>
+
+## UI Resource
+
+Resources는 코드에서 사용하는 추가 파일과 정적인 콘텐츠이다.</br>
+앱 리소스들을 독립적으로 유지관리하기 위해서는 항상 코드에서 외부화해야 한다.</br>
+Resources를 사용하면 화면 크기에 따라 여러가지 UI 레이아웃을 제공하거나 언어 설정에 따라 각기 다른 문자열을 제공 가능하다.</br>
+Resources를 외부화하면 R클래스에서 발생하는 리소스 ID로 액세스 할 수 있다. </br>
+주의사항으로는 리소스 파일을 res/ 디렉토리에 직접 저장하면 컴파일러 오류가 발생한다. </br>
+
+#### drawable
+
+drawable/ 리소스는 화면에 그릴 수 있는 리소스이다. 다른 리소스들은 일반적으로 xml파일이 하위 유형인 반면, </br>
+drawable/ 리소스의 하위 유형은 비트맵파일( .bmp, .png, .jpg, .gif, .9.png) 또는 xml파일이다.
+
+[추가적인 자세한 정보](https://seminzzang.tistory.com/54)
 
 
+#### values
 
+values는 단어 그대로 "값 들" 이라는 의미이다. 여러가지 값들을 저장할 수 있는데, 크게 4가지로 나뉜다.
 
-
+- colors/(색상) : 색상 값을 저장한다. 
+- strings/(문자열) : 문자열을 저장한다.
+- dimens/(치수) : 치수값을 저장한다.
+- styles/(스타일) : 스타일을 설정한다. 스타일은 하위 속성에는 적용되지 않으므로, 하위 속성에도 지정하고 싶으면 theme/를 이용한다. 
 
 
 
