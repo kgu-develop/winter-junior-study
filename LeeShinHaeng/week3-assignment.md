@@ -267,3 +267,63 @@ https://www.youtube.com/watch?v=Q27PGBYmHNA&list=WL&index=8
 https://apro-developer.tistory.com/37
 
 ---
+
+## Github Actions
+
+### 정의
+
+- CI/CD 플랫폼으로, 빌드, 테스트 및 배포 파이프라인을 자동화
+- 저장소에 대한 각 PR을 빌드하고 테스트하거나, 병합된 PR을 프로덕션에 배포하는 등의 워크플로우를 생성
+
+### 구성
+
+1. Workflow
+    - 하나 이상의 작업을 실행하는 구성 가능한 자동화된 프로세스
+    - YAML 파일에 의해 정의, (지정된 이벤트 or 수동으로) 트리거하면 실행
+2. Events
+    - 워크플로우 실행을 트리거하는 저장소 내에서의 특정 활동
+    - 예시: PR, 이슈오픈, 푸시
+3. Jobs
+    - 워크플로우 내에서 동일한 러너에서 실행되는 단계
+    - 각 단계는 동일한 러너에서 실행되기 때문에 단계 간의 데이터를 공유 가능
+    - 다른 job과의 종속성을 구성 가능
+        - 기본적으로 작업은 종속성이 없으며 병렬로 실행
+        - 종속성을 가지면 종속 작업이 완료될 때까지 기다린 후 실행
+4. Actions
+    - GitHub Actions 플랫폼을 위한 사용자 지정 App.
+    - 잡하지만 자주 반복되는 작업을 수행
+    - 예시
+        - 깃헙에서 저장소를 가져오기
+        - 빌드 환경 설정하거나
+        - 클라우드 제공업체에 대한 인증을 설정
+5. Runners
+    - 워크플로우가 트리거될 때 해당 워크플로우를 실행하는 서버
+    - 각 러너는 한 번에 하나의 작업을 실행
+
+### 예시
+
+1. 레포지토리에 .github/workflows/ 디렉토리를 생성
+2. 해당 디렉토리에 xxx.yml 파일 생성
+    
+    ```yaml
+    xxx.yml 파일
+    
+    name: learn-github-actions  # 깃허브 저장소의 "Actions" 탭에 나타날 워크플로의 이름
+    run-name: ${{ github.actor }} is learning GitHub Actions  # 워크플로 실행에 대한 이름
+    on: [push] # 트리거를 지정
+    jobs: # 수행 할 작업
+      check-bats-version:
+        runs-on: ubuntu-latest  #  러너 지정
+        steps:  # 작업 순서 
+          - uses: actions/checkout@v4   # 해당 레포지토리를 체크아웃해 사용 
+          - uses: actions/setup-node@v3
+            with:
+              node-version: '14'        # npm 설체
+          - run: npm install -g bats    # npm을 통해 bats 설치
+          - run: bats -v                # bats 버전 출력
+    ```
+    
+
+### 참조
+
+[https://docs.github.com/ko/actions/learn-github-actions/understanding-github-actions](https://docs.github.com/ko/actions/learn-github-actions/understanding-github-actions#workflows)
