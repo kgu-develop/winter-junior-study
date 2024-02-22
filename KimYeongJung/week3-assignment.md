@@ -13,3 +13,51 @@
 |4|5|6|
 |7|8|9|
 ---
+## UI Resource
+
+### drawable
+- drawable은 상태에 따라 그래픽이나 이미지가 선택적으로 보일 수 있게 한다.
+- ex) 버튼이 눌렸을 때 눌린 이미지가 보이게 설정 가능
+
+#### 종류
+- BitmapDrawable : 이미지 파일을 보여줄 때 사용
+- StateListDrawable : 상태별로 다른 비트맵 그래픽을 참조
+- TransitionDrawable : 두 개의 드로어블을 서로 전환 가능
+- SafeDrawable : 색상과 그라데이션을 포함하여 도형 모양을 정의 가능
+- InsetDrawable : 지정된 거리만큼 다른 드로어블을 들어서 보여줄 수 있음
+- ClipDrawable : 레벨 값을 기준으로 다른 드로어블을 클리핑 가능
+- ScaleDrawable : 레벨 값을 기준으로 다른 드로어블의 크기를 변경 가능
+
+ ### Values
+- 여러가지 값들을 저장할 수 있는 것
+- 같은 값들을 여러 번 사용해야 할 때 values 값을 이용해 내가 설정해 놓은 값들을 불러올 수 있다.
+- 편리성을 높일 수 있기에 사용
+
+#### colors
+- 색상 값을 저장한다
+```
+<color name = "MYRED">#FF0000</color>
+```
+
+#### strings
+- 문자열을 저장한다 & 문자열 배열도 저장 가능
+```
+<string name="TEXT1">Test 첫 번째 </string>
+```
+
+#### dimens
+- 치수 값을 저장
+```
+<dimen name="textview_height">25dp</dimen>
+```
+
+#### styles
+- 스타일을 설정
+```
+<style name = "mySTYLE">
+        <item name = "android:text">TEST</item>
+        <item name = "android:textSize">30dp</item>
+        <item name = "android:textColor">#ff0000</item>
+</style>
+```
+---
