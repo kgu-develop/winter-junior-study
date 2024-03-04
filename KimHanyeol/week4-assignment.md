@@ -131,3 +131,49 @@ private void newLine() {
 
 - https://hudi.blog/do-not-use-system-out-println-for-logging/
 - https://velog.io/@devjennie/javascript-자바스크립트-콘솔로그-찍는-방법
+
+---
+
+## Git Squash & Rebase & Stash
+
+### Squash
+
+- 여러 개의 커밋을 하나의 커밋으로 합치는 방법 
+- 여러 개의 중간 커밋들을 깔끔하게 정리하여 하나의 의미 있는 커밋으로 만들 수 있다
+- 보통 git rebase의 interactive 모드를 사용하여 squash 작업을 진행
+- 깃허브 pr을 이용하면 머지와 함께 스쿼시할 수 있음
+
+### Rebase
+
+- Rebase 는 말 그대로 base를 재설정한다는 의미로, 하나의 브랜치가 다른 브랜치에서 파생되서 나온 경우, </br>
+  다른 브랜치에서 진행된 커밋을 다시 가져와서 base 를 재설정한다는 것
+- 브랜치는 base 지점을 가지고 있어, base 에서부터 코드를 수정
+- Rebase 는 커밋의 시간에 관계없이 마지막에 merge 되는 브랜치의 커밋을 가장 뒤에 붙이는 전략이다
+
+### Merge
+
+- Merge 는 브랜치를 통합하는 것
+- 병합을 하면 합쳐진 브랜치의 커밋 메시지가 중복으로 쌓이며, 새로운 Merge 커밋을 생성
+
+
+### Stash
+
+- Git stash는 변경사항을 일시적으로 저장하는 기능
+- 아직 커밋하기엔 이른 경우나 다른 브랜치로 체크아웃할 때 변경사항을 유지하고 싶을 때 사용
+- 혹은 변경사항을 일시적으로 저장하고 싶은 경우 사용
+
+### Stash와 Commit의 차이점
+  - 용도
+    - Stash: 주로 다른 브랜치로 이동하거나 특정 작업을 위해 현재 작업 중인 변경 사항을 임시로 저장
+    - Commit: 변경 사항을 영구적으로 기록 -> 프로젝트의 히스토리에 남겨짐
+  - 브랜치와 관련성
+    - Stash: 브랜치에 직접적으로 연결되지 않음 -> 다른 브랜치로 이동할 때엗고 적용 가능
+    - Commit: 브랜치에 직접적으로 연결
+
+
+### 참조
+
+- https://resilient-923.tistory.com/358
+- https://velog.io/@lgs03042/Git-Squash-커밋-기록-깔끔하게-관리하기
+- https://velog.io/@msung99/Git-Rebase란-무엇인가
+- https://velog.io/@zeler1004/git-commit과-stash
