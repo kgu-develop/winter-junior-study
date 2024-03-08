@@ -34,3 +34,30 @@
 - Error : 요청 처리 중 문제
 - Fatal : 아주 심각한 에러 -> Error로 대체 가능
 ---
+## Git Squash & Rebase
+
+### Git Squash란
+- 여러 개의 커밋을 하나의 커밋으로 합치는 방법으로 커밋을 깔끔하게 정리할 수 있도록 해준다.
+
+### Rebase
+- 한 브랜치에서 다른 브랜치로 합치는 방법으로 Merge와 비슷하다
+- Merge와 실행결과는 같지만 커밋의 히스토리가 달라진다
+- Rebase는 Merge와 달리 위험성이 있고 까다롭지만 커밋 히스토리를 깔끔하게 관리할 수 있다.
+
+##### Merge와의 차이점
+- Merge는 3-way Merge로 새로운 커밋을 생성하는 것이다.
+
+Rebase는 
+
+    git checkout 브랜치이름
+    git rebase master
+
+이 코드를 통해 내부에서는 master가 base가 되고 master와 통합할 브랜치의 차이를 임시 저장 공간(Patch)에 저장한다.
+이렇게 되면 커밋 히스토리는 깔꿈하게 정리되고 마지막으로 master브랜치를 Fast-forward시키면 끝난다.
+
+    git checkout master
+    git merge experiment
+
+##### Rebase의 위험성
+- 이미 공개해서 사람들이 사용하는 커밋을 rebase하면 반드시 문제가 생긴다. (협업 없이 혼자 사용하는 경우 문제 X)
+- 협업 중에서는 push전에만 rebase를 사용하는 것을 권장한다.
